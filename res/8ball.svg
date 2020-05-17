@@ -19,6 +19,18 @@
      id="defs2">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient1359">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.8106119"
+         offset="0"
+         id="stop1355" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop1357" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient873">
       <stop
          style="stop-color:#000000;stop-opacity:1"
@@ -111,32 +123,17 @@
          stdDeviation="0.98026063"
          id="feGaussianBlur1844" />
     </filter>
-    <filter
-       height="1.0837748"
-       y="-0.041887378"
-       width="1.0725511"
-       x="-0.036275534"
-       id="filter930"
-       style="color-interpolation-filters:sRGB"
-       inkscape:collect="always">
-      <feGaussianBlur
-         id="feGaussianBlur932"
-         stdDeviation="0.56916353"
-         inkscape:collect="always" />
-    </filter>
-    <filter
-       height="1.0762935"
-       y="-0.038146728"
-       width="1.0834007"
-       x="-0.041700352"
-       id="filter1400"
-       style="color-interpolation-filters:sRGB"
-       inkscape:collect="always">
-      <feGaussianBlur
-         id="feGaussianBlur1402"
-         stdDeviation="0.5956971"
-         inkscape:collect="always" />
-    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1359"
+       id="radialGradient1361"
+       cx="94.805206"
+       cy="141.97752"
+       fx="94.805206"
+       fy="141.97752"
+       r="22.489584"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.44453802,0,0,0.44453802,52.660688,78.863116)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -145,9 +142,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0012721"
-     inkscape:cx="1043.8922"
-     inkscape:cy="576.24977"
+     inkscape:zoom="0.6210626"
+     inkscape:cx="199.56879"
+     inkscape:cy="652.62552"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -173,16 +170,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       r="22.489584"
-       cy="148.48433"
-       cx="292.3248"
-       id="circle84"
-       style="opacity:1;fill:#808080;fill-opacity:1;stroke-width:0.205472"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_07.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
     <g
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
        id="g69">
       <circle
          r="56.491707"
@@ -220,420 +210,13 @@
          id="path920"
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583;filter:url(#filter1842)" />
     </g>
-    <g
-       id="g386"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_00.png"
+    <circle
+       style="fill:url(#radialGradient1361);fill-opacity:1;stroke-width:0.205472"
+       id="circle1353"
+       cx="102.64658"
+       cy="152.22501"
+       r="22.489584"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       transform="rotate(-8.4700095,163.23224,104.78959)"
-       inkscape:transform-center-x="-1.2433097"
-       inkscape:transform-center-y="-3.4923556">
-      <path
-         d="m 103.0782,173.55126 -18.828012,-32.61107 37.656022,0 z"
-         transform="matrix(1,0,0,-1,88.041958,268.47443)"
-         sodipodi:type="star"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         id="path29"
-         sodipodi:sides="3"
-         sodipodi:cx="103.0782"
-         sodipodi:cy="151.81055"
-         sodipodi:r1="21.740717"
-         sodipodi:r2="10.870358"
-         sodipodi:arg1="1.5707963"
-         sodipodi:arg2="2.6179939"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         inkscape:transform-center-x="1.298623e-06"
-         inkscape:transform-center-y="-5.4351809" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:4.75036px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.118759"
-         x="191.08525"
-         y="116.29177"
-         id="text936"><tspan
-           sodipodi:role="line"
-           x="191.08525"
-           y="116.29177"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           id="tspan938">Это</tspan><tspan
-           id="tspan39"
-           sodipodi:role="line"
-           x="191.08525"
-           y="122.22972"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759">бесспорно</tspan></text>
-    </g>
-    <g
-       id="g380"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_03.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       transform="rotate(4.8313201,329.80847,97.283721)">
-      <path
-         d="m 239.35884,127.52982 -18.82801,-32.611077 37.65602,-1e-6 z"
-         inkscape:transform-center-y="5.4351781"
-         inkscape:transform-center-x="1.6501855e-06"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="2.6179939"
-         sodipodi:arg1="1.5707963"
-         sodipodi:r2="10.870358"
-         sodipodi:r1="21.740717"
-         sodipodi:cy="105.7891"
-         sodipodi:cx="239.35884"
-         sodipodi:sides="3"
-         id="path61"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         sodipodi:type="star" />
-      <text
-         id="text67"
-         y="103.96638"
-         x="239.32481"
-         style="font-style:normal;font-weight:normal;font-size:3.54787px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.0886967"
-         xml:space="preserve"><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0886967"
-           y="103.96638"
-           x="239.32481"
-           sodipodi:role="line"
-           id="tspan65">Определённо</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0886967"
-           y="108.40121"
-           x="239.32481"
-           sodipodi:role="line"
-           id="tspan219">да</tspan></text>
-    </g>
-    <g
-       id="g392"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_01.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       transform="rotate(-8.0256633,192.27682,154.91865)">
-      <path
-         d="m 103.0782,173.55126 -18.828012,-32.61107 37.656022,0 z"
-         inkscape:transform-center-y="-5.4351809"
-         inkscape:transform-center-x="1.298623e-06"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="2.6179939"
-         sodipodi:arg1="1.5707963"
-         sodipodi:r2="10.870358"
-         sodipodi:r1="21.740717"
-         sodipodi:cy="151.81055"
-         sodipodi:cx="103.0782"
-         sodipodi:sides="3"
-         id="path41"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         sodipodi:type="star"
-         transform="matrix(1,0,0,-1,89.198617,312.16438)" />
-      <text
-         id="text47"
-         y="159.75655"
-         x="191.75806"
-         style="font-style:normal;font-weight:normal;font-size:3.70477px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.0926193"
-         xml:space="preserve"><tspan
-           id="tspan43"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0926193"
-           y="159.75655"
-           x="191.75806"
-           sodipodi:role="line">Это</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0926193"
-           y="164.38751"
-           x="191.75806"
-           sodipodi:role="line"
-           id="tspan45">предрешено</tspan></text>
-    </g>
-    <g
-       id="g399"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_04.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <path
-         d="m 240.5155,171.21977 -18.82801,-32.61108 37.65603,0 z"
-         sodipodi:type="star"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         id="path69"
-         sodipodi:sides="3"
-         sodipodi:cx="240.5155"
-         sodipodi:cy="149.47905"
-         sodipodi:r1="21.740717"
-         sodipodi:r2="10.870358"
-         sodipodi:arg1="1.5707963"
-         sodipodi:arg2="2.6179939"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         inkscape:transform-center-y="5.4351771" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:3.90589px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.0976472"
-         x="240.49709"
-         y="144.93788"
-         id="text75"><tspan
-           sodipodi:role="line"
-           x="240.49709"
-           y="144.93788"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0976472"
-           id="tspan71">Можешь</tspan><tspan
-           id="tspan73"
-           sodipodi:role="line"
-           x="240.49709"
-           y="149.82025"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0976472">быть</tspan><tspan
-           sodipodi:role="line"
-           x="240.49709"
-           y="154.70261"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.0976472"
-           id="tspan221">уверен</tspan></text>
-    </g>
-    <g
-       id="g425"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_02.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <path
-         d="m 103.0782,173.55126 -18.828012,-32.61107 37.656022,0 z"
-         transform="matrix(1,0,0,-1,88.556767,354.96572)"
-         sodipodi:type="star"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         id="path51"
-         sodipodi:sides="3"
-         sodipodi:cx="103.0782"
-         sodipodi:cy="151.81055"
-         sodipodi:r1="21.740717"
-         sodipodi:r2="10.870358"
-         sodipodi:arg1="1.5707963"
-         sodipodi:arg2="2.6179939"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         inkscape:transform-center-x="1.298623e-06"
-         inkscape:transform-center-y="-5.4351809" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:4.14994px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.103749"
-         x="191.58936"
-         y="202.94373"
-         id="text57"><tspan
-           sodipodi:role="line"
-           x="191.58936"
-           y="202.94373"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.103749"
-           id="tspan53">Никаких</tspan><tspan
-           id="tspan55"
-           sodipodi:role="line"
-           x="191.58936"
-           y="208.13115"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.103749">сомнений</tspan></text>
-    </g>
-    <g
-       id="g419"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_05.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       transform="rotate(6.9503782,239.87365,197.71557)">
-      <path
-         d="m 103.0782,173.55126 -18.828012,-32.61107 37.656022,0 z"
-         inkscape:transform-center-y="-5.4351809"
-         inkscape:transform-center-x="1.298623e-06"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="2.6179939"
-         sodipodi:arg1="1.5707963"
-         sodipodi:r2="10.870358"
-         sodipodi:r1="21.740717"
-         sodipodi:cy="151.81055"
-         sodipodi:cx="103.0782"
-         sodipodi:sides="3"
-         id="path77"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         sodipodi:type="star"
-         transform="matrix(1,0,0,-1,136.79545,354.9613)" />
-      <text
-         id="text83"
-         y="199.07452"
-         x="239.83873"
-         style="font-style:normal;font-weight:normal;font-size:4.75036px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.118759"
-         xml:space="preserve"><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           y="199.07452"
-           x="239.83873"
-           sodipodi:role="line"
-           id="tspan81">Мне</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           y="205.01247"
-           x="239.83873"
-           sodipodi:role="line"
-           id="tspan225">кажется</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           y="210.95042"
-           x="239.83873"
-           sodipodi:role="line"
-           id="tspan227">да</tspan></text>
-    </g>
-    <g
-       transform="rotate(-7.4751387,231.67998,86.652705)"
-       id="g374"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_06.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <path
-         d="m 291.21735,126.69077 -18.82802,-32.61107 37.65603,-10e-7 z"
-         inkscape:transform-center-y="5.4351754"
-         inkscape:transform-center-x="-3.5988379e-06"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="2.6179939"
-         sodipodi:arg1="1.5707963"
-         sodipodi:r2="10.870358"
-         sodipodi:r1="21.740717"
-         sodipodi:cy="104.95006"
-         sodipodi:cx="291.21735"
-         sodipodi:sides="3"
-         id="path115"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         sodipodi:type="star" />
-      <text
-         id="text121"
-         y="102.81804"
-         x="291.18829"
-         style="font-style:normal;font-weight:normal;font-size:4.48985px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.112246"
-         xml:space="preserve"><tspan
-           id="tspan117"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.112246"
-           y="102.81804"
-           x="291.18829"
-           sodipodi:role="line">Вероятнее</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.112246"
-           y="108.43035"
-           x="291.18829"
-           sodipodi:role="line"
-           id="tspan119">всего</tspan></text>
-    </g>
-    <g
-       id="g368"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_09.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <path
-         d="m 103.0782,173.55126 -18.828012,-32.61107 37.656022,0 z"
-         transform="matrix(1,0,0,-1,236.37782,267.62655)"
-         sodipodi:type="star"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         id="path123"
-         sodipodi:sides="3"
-         sodipodi:cx="103.0782"
-         sodipodi:cy="151.81055"
-         sodipodi:r1="21.740717"
-         sodipodi:r2="10.870358"
-         sodipodi:arg1="1.5707963"
-         sodipodi:arg2="2.6179939"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         inkscape:transform-center-x="1.298623e-06"
-         inkscape:transform-center-y="-5.4351809" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:7.405px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.185125"
-         x="339.36667"
-         y="117.26181"
-         id="text129"><tspan
-           id="tspan127"
-           sodipodi:role="line"
-           x="339.36667"
-           y="117.26181"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.185125">ДА</tspan></text>
-    </g>
-    <g
-       inkscape:export-ydpi="96"
-       inkscape:export-xdpi="96"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_07.png"
-       transform="rotate(22.045749,292.75379,148.3341)"
-       id="g1408">
-      <path
-         d="m 292.37399,170.38073 -18.82801,-32.61107 37.65603,0 z"
-         sodipodi:type="star"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter1400)"
-         id="path133"
-         sodipodi:sides="3"
-         sodipodi:cx="292.37399"
-         sodipodi:cy="148.64001"
-         sodipodi:r1="21.740717"
-         sodipodi:r2="10.870358"
-         sodipodi:arg1="1.5707963"
-         sodipodi:arg2="2.6179939"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         inkscape:transform-center-x="9.6726465e-06"
-         inkscape:transform-center-y="5.4351821"
-         transform="rotate(-24.430522,290.76642,149.08545)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:4.39331px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.109833"
-         x="204.65698"
-         y="252.41937"
-         id="text139"
-         transform="rotate(-24.430522)"><tspan
-           id="tspan137"
-           sodipodi:role="line"
-           x="204.65698"
-           y="252.41937"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.109833">Выглядит</tspan><tspan
-           sodipodi:role="line"
-           x="204.65698"
-           y="257.91101"
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.109833"
-           id="tspan231">хорошо</tspan></text>
-    </g>
-    <g
-       id="g412"
-       inkscape:export-filename="/home/olly/work/go/src/мои_проекты/8ball/pics/ans_08.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       transform="rotate(17.88427,272.9212,192.4659)">
-      <path
-         d="m 291.73215,213.18206 -18.82802,-32.61107 37.65603,0 z"
-         inkscape:transform-center-y="5.4351827"
-         inkscape:transform-center-x="5.3757714e-06"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="2.6179939"
-         sodipodi:arg1="1.5707963"
-         sodipodi:r2="10.870358"
-         sodipodi:r1="21.740717"
-         sodipodi:cy="191.44135"
-         sodipodi:cx="291.73215"
-         sodipodi:sides="3"
-         id="path151"
-         style="fill:#000080;stroke-width:0.264583;filter:url(#filter930)"
-         sodipodi:type="star" />
-      <text
-         id="text157"
-         y="187.65205"
-         x="291.69724"
-         style="font-style:normal;font-weight:normal;font-size:4.75036px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.118759"
-         xml:space="preserve"><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           y="187.65205"
-           x="291.69724"
-           sodipodi:role="line"
-           id="tspan155">Знаки</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           y="193.59"
-           x="291.69724"
-           sodipodi:role="line"
-           id="tspan235">говорят</tspan><tspan
-           style="text-align:center;text-anchor:middle;fill:#00ff00;stroke-width:0.118759"
-           y="199.52795"
-           x="291.69724"
-           sodipodi:role="line"
-           id="tspan237">&quot;да&quot;</tspan></text>
-    </g>
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
