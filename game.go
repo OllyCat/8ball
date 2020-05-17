@@ -6,10 +6,12 @@ import (
 	"image/color"
 	_ "image/png"
 	"log"
+	"math"
 	"math/rand"
 	"strings"
 
 	"github.com/hajimehoshi/ebiten"
+	"golang.org/x/exp/shiny/materialdesign/colornames"
 )
 
 type Game struct {
@@ -78,7 +80,8 @@ func (g *Game) Init() {
 	}
 
 	// устанавливаем цвет фона
-	g.bg = color.RGBA{R: 0x51, G: 0x9c, B: 0x52, A: 0xff}
+	//g.bg = color.RGBA{R: 0x51, G: 0x9c, B: 0x52, A: 0xff}
+	g.bg = colornames.Green400
 	// началный альфа канал
 	g.alpha = 0
 	// начальное состояние конечного автомата
@@ -94,10 +97,12 @@ func (g *Game) Update(screen *ebiten.Image) error {
 		return errors.New("Game finished")
 	}
 
+	t := ebiten.Touches()
+
 	switch g.state {
 	case 0:
 		// если клацнули мышкой - меняем состояние автомата
-		if ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
+		if len(t) > 0 || ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
 			g.state++
 			// случайные небольшой угол поворота
 			g.angle = 0.45/2 - rand.Float64()*0.45
@@ -116,7 +121,7 @@ func (g *Game) Update(screen *ebiten.Image) error {
 		}
 	case 2:
 		// если клацнули мышкой - меняем состояние автомата
-		if ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
+		if len(t) > 0 || ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
 			g.state++
 		}
 	case 3:
@@ -135,6 +140,9 @@ func (g *Game) Update(screen *ebiten.Image) error {
 }
 
 func (g *Game) Draw(screen *ebiten.Image) {
+	// берём размер экрана
+	sw, sh := screen.Size()
+
 	// отрисовка экрана
 
 	// заполняем цветом фона
@@ -144,10 +152,16 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	op := &ebiten.DrawImageOptions{}
 	// берём размеры текстуры
 	w, h := g.ball.Size()
+
+	// рассчитываем фактор увеличения исходя из размеров экрана
+	s := math.Min(float64(sw)/float64(w), float64(sh)/float64(h))
+
+	// увеличиваем текстуру до нужных размеров
+	op.GeoM.Scale(s, s)
+	w, h = int(float64(w)*s), int(float64(h)*s)
+	op.Filter = ebiten.FilterLinear
 	// смещаем текстуру в её центр
 	op.GeoM.Translate(-float64(w)/2, -float64(h)/2)
-	// берём размер экрана
-	sw, sh := screen.Size()
 	// смещаем текстуру туда
 	op.GeoM.Translate(float64(sw)/2, float64(sh)/2)
 	screen.DrawImage(g.ball, op)
@@ -156,6 +170,8 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	if g.state > 0 {
 		op = &ebiten.DrawImageOptions{}
 		w, h = g.answers[g.rand].Size()
+		op.GeoM.Scale(s, s)
+		w, h = int(float64(w)*s), int(float64(h)*s)
 
 		op.Filter = ebiten.FilterLinear
 		op.GeoM.Translate(-float64(w)/2, -float64(h)/2)
@@ -169,10 +185,13 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	op = &ebiten.DrawImageOptions{}
 	// берём размеры текстуры
 	w, h = g.glass.Size()
+
+	// увеличиваем
+	w, h = g.answers[g.rand].Size()
+	op.GeoM.Scale(s, s)
+	w, h = int(float64(w)*s), int(float64(h)*s)
 	// смещаем текстуру в её центр
 	op.GeoM.Translate(-float64(w)/2, -float64(h)/2)
-	// берём размер экрана
-	sw, sh = screen.Size()
 	// смещаем текстуру туда
 	op.GeoM.Translate(float64(sw)/2, float64(sh)/2)
 	screen.DrawImage(g.glass, op)
@@ -180,5 +199,6 @@ func (g *Game) Draw(screen *ebiten.Image) {
 }
 
 func (g *Game) Layout(outW, outH int) (screenWidth, screenHeight int) {
-	return 450, 450
+	s := ebiten.DeviceScaleFactor()
+	return int(float64(outW) * s), int(float64(outH) * s)
 }

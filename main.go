@@ -13,7 +13,8 @@ func init() {
 }
 
 func main() {
-	ebiten.SetWindowSize(450, 450)
+	//ebiten.SetWindowSize(450, 450)
+	ebiten.SetWindowResizable(true)
 	ebiten.SetWindowTitle("Magic ball")
 
 	game := &Game{}
