@@ -2,13 +2,14 @@ package main
 
 import (
 	"errors"
+	"image"
 	"image/color"
+	_ "image/png"
 	"log"
 	"math/rand"
-	"path/filepath"
+	"strings"
 
 	"github.com/hajimehoshi/ebiten"
-	"github.com/hajimehoshi/ebiten/ebitenutil"
 )
 
 type Game struct {
@@ -37,28 +38,37 @@ func (g *Game) Init() {
 	// грузим текстуры
 
 	// шар:
-	img, _, err := ebitenutil.NewImageFromFile("pics/ball.png", ebiten.FilterDefault)
+	r := strings.NewReader(ball_png)
+	ball_img, _, err := image.Decode(r)
+	if err != nil {
+		log.Fatalf("Could not load ball resouse: %v\n", err)
+	}
+	bimg, err := ebiten.NewImageFromImage(ball_img, ebiten.FilterDefault)
 	if err != nil {
 		log.Fatal("Could not load resurse: ", err)
 	}
-	g.ball = img
+	g.ball = bimg
 
 	// стекло:
-	img, _, err = ebitenutil.NewImageFromFile("pics/glass.png", ebiten.FilterDefault)
+	r = strings.NewReader(glass_png)
+	glass_img, _, err := image.Decode(r)
+	if err != nil {
+		log.Fatalf("Could not load glass resouse: %v\n", err)
+	}
+	gimg, err := ebiten.NewImageFromImage(glass_img, ebiten.FilterDefault)
 	if err != nil {
 		log.Fatal("Could not load resurse: ", err)
 	}
-	g.glass = img
+	g.glass = gimg
 
 	// ответы:
-	fl, err := filepath.Glob("./pics/ans_*.png")
-	if err != nil {
-		log.Fatal(err)
-	}
-	//log.Printf("%#v\n", fl)
-
-	for _, name := range fl {
-		img, _, err = ebitenutil.NewImageFromFile(name, ebiten.FilterDefault)
+	for _, a := range answers {
+		r = strings.NewReader(a)
+		i, _, err := image.Decode(r)
+		if err != nil {
+			log.Fatalf("Could not load glass resouse: %v\n", err)
+		}
+		img, err := ebiten.NewImageFromImage(i, ebiten.FilterDefault)
 		if err != nil {
 			log.Fatal("Could not load resurse: ", err)
 		}
@@ -81,7 +91,7 @@ func (g *Game) Update(screen *ebiten.Image) error {
 	case ebiten.IsKeyPressed(ebiten.KeyEscape):
 		// если нажата Esc - выходим из игры возвращая сообщение об ошибке
 		// не знаю на сколько правильно так выходить, но пока не понял как сделать лучше в ebiten
-		return errors.New("\nGame finished\n")
+		return errors.New("Game finished")
 	}
 
 	switch g.state {
