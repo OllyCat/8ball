@@ -1,7 +1,10 @@
 package main
 
 import (
+	"bytes"
+	"embed"
 	"errors"
+	"fmt"
 	"image"
 	"image/color"
 	_ "image/png"
@@ -12,6 +15,15 @@ import (
 
 	"github.com/hajimehoshi/ebiten"
 	"golang.org/x/exp/shiny/materialdesign/colornames"
+)
+
+var (
+	//go:embed res/ball.png
+	ball_png string
+	//go:embed res/glass.png
+	glass_png string
+	//go:embed res/ans_*.png
+	ansFs embed.FS
 )
 
 type Game struct {
@@ -64,11 +76,16 @@ func (g *Game) Init() {
 	g.glass = gimg
 
 	// ответы:
-	for _, a := range answers {
-		r = strings.NewReader(a)
+	for i := 0; i < 20; i++ {
+		fn := fmt.Sprintf("res/ans_%02d.png", i)
+		f, err := ansFs.ReadFile(fn)
+		if err != nil {
+			log.Fatalf("Could not load answers png resouse: %v\n", err)
+		}
+		r := bytes.NewReader(f)
 		i, _, err := image.Decode(r)
 		if err != nil {
-			log.Fatalf("Could not load glass resouse: %v\n", err)
+			log.Fatalf("Could not load answers png resouse: %v\n", err)
 		}
 		img, err := ebiten.NewImageFromImage(i, ebiten.FilterDefault)
 		if err != nil {
