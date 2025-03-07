@@ -1,3 +1,4 @@
+// main package
 package main
 
 import (
@@ -19,9 +20,9 @@ import (
 
 var (
 	//go:embed res/ball.png
-	ball_png string
+	ballPng string
 	//go:embed res/glass.png
-	glass_png string
+	glassPng string
 	//go:embed res/ans_*.png
 	ansFs embed.FS
 )
@@ -52,26 +53,26 @@ func (g *Game) Init() {
 	// грузим текстуры
 
 	// шар:
-	r := strings.NewReader(ball_png)
+	r := strings.NewReader(ballPng)
 	ball_img, _, err := image.Decode(r)
 	if err != nil {
-		log.Fatalf("Could not load ball resouse: %v\n", err)
+		log.Fatalf("Could not load ball resource: %v\n", err)
 	}
 	bimg, err := ebiten.NewImageFromImage(ball_img, ebiten.FilterDefault)
 	if err != nil {
-		log.Fatal("Could not load resurse: ", err)
+		log.Fatal("Could not load resource: ", err)
 	}
 	g.ball = bimg
 
 	// стекло:
-	r = strings.NewReader(glass_png)
+	r = strings.NewReader(glassPng)
 	glass_img, _, err := image.Decode(r)
 	if err != nil {
-		log.Fatalf("Could not load glass resouse: %v\n", err)
+		log.Fatalf("Could not load glass resource: %v\n", err)
 	}
 	gimg, err := ebiten.NewImageFromImage(glass_img, ebiten.FilterDefault)
 	if err != nil {
-		log.Fatal("Could not load resurse: ", err)
+		log.Fatal("Could not load resource: ", err)
 	}
 	g.glass = gimg
 
@@ -80,16 +81,16 @@ func (g *Game) Init() {
 		fn := fmt.Sprintf("res/ans_%02d.png", i)
 		f, err := ansFs.ReadFile(fn)
 		if err != nil {
-			log.Fatalf("Could not load answers png resouse: %v\n", err)
+			log.Fatalf("Could not load answers png resource: %v\n", err)
 		}
 		r := bytes.NewReader(f)
 		i, _, err := image.Decode(r)
 		if err != nil {
-			log.Fatalf("Could not load answers png resouse: %v\n", err)
+			log.Fatalf("Could not load answers png resource: %v\n", err)
 		}
 		img, err := ebiten.NewImageFromImage(i, ebiten.FilterDefault)
 		if err != nil {
-			log.Fatal("Could not load resurse: ", err)
+			log.Fatal("Could not load resource: ", err)
 		}
 
 		// собираем их в слайс
@@ -99,14 +100,14 @@ func (g *Game) Init() {
 	// устанавливаем цвет фона
 	//g.bg = color.RGBA{R: 0x51, G: 0x9c, B: 0x52, A: 0xff}
 	g.bg = colornames.Green400
-	// началный альфа канал
+	// начальный альфа канал
 	g.alpha = 0
 	// начальное состояние конечного автомата
 	g.state = 0
 }
 
 func (g *Game) Update(screen *ebiten.Image) error {
-	// проверяем нажатие клавишь
+	// проверяем нажатие клавиш
 	switch {
 	case ebiten.IsKeyPressed(ebiten.KeyEscape):
 		// если нажата Esc - выходим из игры возвращая сообщение об ошибке
@@ -148,7 +149,7 @@ func (g *Game) Update(screen *ebiten.Image) error {
 			g.alpha = 0
 			g.state = 0
 		} else {
-			// инаяе - вычитаем из альфа канала приращение для плавного затухания
+			// иначе - вычитаем из альфа канала приращение для плавного затухания
 			g.alpha -= 0.015
 		}
 	}

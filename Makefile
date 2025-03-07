@@ -4,3 +4,4 @@ build:
 	GOOS=windows GOARCH=386 go build -ldflags "-s -w" -o release/windows/386/8ball.windows.386.exe
 	#GOOS=android go build -ldflags "-s -w" -o release/android/go8ball.apk
 	#GOOS=darwin go build -ldflags "-s -w" -o release/macosx/8ball
+	GOOS=js GOARCH=wasm go build -ldflags "-s -w" -o release/wasm/8ball

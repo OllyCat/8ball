@@ -9,6 +9,8 @@ pics
 
 # Test binary, built with `go test -c`
 *.test
+go.sum
+go.mod
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
